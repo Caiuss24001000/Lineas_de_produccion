@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+div{
+    color: white;
+}
+
+.color1{
+    background-color: #001B48;
+    width: 140px;
+}
+
+.color2{
+    background-color: #02457A;
+    width: 140px;
+}
+
+.color3{
+    background-color: #018ABE;
+    width: 140px;
+}
+
+.color4{
+    background-color: #97CADB;
+    width: 140px;
+}
+
+.color5{
+    background-color: #D6E8EE;
+    width: 140px;
+}
+
+.blender{
+    position: fixed;
+    left: 50%;
+    top: 66%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 400px;
+    /* background-color: red; */
+    background-image: url(../img/licuadora.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blender.active{
+    background-image: url(../img/licuadora2.png);
+}
+.blender-button{
+    margin: 290px 90px 0px;
+    width: 40px;
+    height: 75px;
+    /* background-color: #018ABE; */
+}
