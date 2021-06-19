@@ -9,37 +9,60 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="icon" type="image/gif" href="img/animated_favicon1.gif">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Lineas de producción</title>
 </head>
 <body>
-    <section>
-        <h1>Bienvenido</h1>
-    </section>
-    
-    <section>
-        <p>Explicación</p><br>
-    </section>
-    
-    <p>Paleta de colores</p><br>
-    <div id="color1" class="color1">
-        <p>Color 1 #001B48</p>
+    <!--Barra de navegacion sin editar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Equipo .h</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Introduccion<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class = 'container - fluid'>
+        <h2>Bienvenido, usuario!!</h2>
+        
+            
+        <section>
+            <p>Explicación</p><br>
+        </section>
+        
+        <p>Paleta de colores</p><br>
+        <div id="color1" class="color1">
+            <p>Color 1 #001B48</p>
+        </div>
+        <div class="color2">
+            <p>Color 2 #02457A</p>
+        </div>
+        <div class="color3">
+            <p>Color 3 #018ABE</p>
+        </div>
+        <div class="color4">
+            <p>Color 4 #97CADB</p>
+        </div>
+        <div class="color5">
+            <p>Color 5 #D6E8EE</p>
+        </div>
+        <div id="blender" class="blender">
+            <div id="blender-button" class="blender-button" onclick="controlarLicuadora()"></div>
+        </div>
+        <audio id="blender-button-sound" src="sounds/click.mp3" type="audio/mpeg"></audio>
+        <script src="js/lines.js"></script>
     </div>
-    <div class="color2">
-        <p>Color 2 #02457A</p>
-    </div>
-    <div class="color3">
-        <p>Color 3 #018ABE</p>
-    </div>
-    <div class="color4">
-        <p>Color 4 #97CADB</p>
-    </div>
-    <div class="color5">
-        <p>Color 5 #D6E8EE</p>
-    </div>
-    <div id="blender" class="blender">
-        <div id="blender-button" class="blender-button" onclick="controlarLicuadora()"></div>
-    </div>
-    <audio id="blender-button-sound" src="sounds/click.mp3" type="audio/mpeg"></audio>
-    <script src="js/lines.js"></script>
 </body>
 </html>
