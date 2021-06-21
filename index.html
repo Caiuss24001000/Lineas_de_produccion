@@ -12,40 +12,48 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Lineas de producción</title>
 </head>
-<body>
+<body style = "background-color: #97CADB;">
     <!--Barra de navegacion sin editar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Equipo .h</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Introduccion<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre nosotros</a>
-            </li>
-            <li class="nav-item dropdown">
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001B48;">
+      <a class="navbar-brand" href="aboutDotH.html" style="color:#97CADB">Equipo .h</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html" style="color:#97CADB">Introduccion<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color:#97CADB" href="#">Sobre nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+          </li>
+        </ul>
         </div>
-      </nav>
+        </nav>
 
-    <div class = 'container - fluid'>
-        <h2>Bienvenido, usuario!!</h2>
+    <div class = 'container-fluid' style="background-color:#97CADB;">
+        <h2 style="color: #02457A; text-align: center; margin-top: 0.5cm;">Introduccion al problema de líneas de producción</h2>
         
-            
-        <section>
-            <p>Explicación</p><br>
-        </section>
-        
-        <p>Paleta de colores</p><br>
+        <div class="container" style="color: #02457A; justify-content: baseline; margin-top: 1cm;">
+          <p style="color: #02457A;">El problema en esencia dicta que:</p>
+          <ul style="text-align: justify;">
+            <li>Una fábrica de automóviles tiene dos líneas de montaje, cada una con n estaciones.</li>
+            <li>Una estacion se indica con S, i, j donde i es 1 o 2 e indica la línea de montaje en la que se encuentra cada estacion, y j indica el número de cada estación. El tiempo empleado por estacion se indica mediante a i,j.</li>
+            <li>Cada estacion está dedicada a algún tipo de trabajo como montaje de motores, montaje de carrocerías. pintura, etc. Por lo tanto, el chasis de un automovil debe pasar por cada una de las n estaciones en orden antes de salir de fábrica. Las estaciones paralelas de las dos líneas de montaje realizan la misma tarea. Después de pasar por la estación S,i, j continuará hasta la estación S, i, j + 1 a menos que decida transferirse a la otra línea.</li>
+            <li>Continuar en la misma línea no tiene ningún costo adicional, pero la transferencia de línea de montaje tiene un tiempo de entrada e[i] y un tiempo de salida x[i] que pueden ser diferentes para las dos lineas. Proporcione un algoritmo para calcular el tiempo mínimo que se necesitará para construir un chasis de automóvil.</li>
+          </ul>
+          <p style ="text-align:center"><img src="assets/lineasProduccionBase.png"></p>
+        </div>
+
+        <!--
+          >Paleta de colores</p><br>
         <div id="color1" class="color1">
             <p>Color 1 #001B48</p>
         </div>
+        
         <div class="color2">
             <p>Color 2 #02457A</p>
         </div>
@@ -58,11 +66,15 @@
         <div class="color5">
             <p>Color 5 #D6E8EE</p>
         </div>
-        <div id="blender" class="blender">
-            <div id="blender-button" class="blender-button" onclick="controlarLicuadora()"></div>
-        </div>
-        <audio id="blender-button-sound" src="sounds/click.mp3" type="audio/mpeg"></audio>
-        <script src="js/lines.js"></script>
-    </div>
-</body>
+  
+        -->
+
+        <code>
+          <p>#include main.h</p>
+          <p>int main(){</p>
+          <p>printf("Hola mundo. .  .")</p>
+          <p>return 0;</p>
+          <p>}</p>
+        </code>
+      </body>
 </html>
