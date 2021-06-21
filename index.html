@@ -6,72 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/gif" href="img/animated_favicon1.gif">
   <link rel="stylesheet" href="css/index.css">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Lineas de producción</title>
 </head>
 
-<body>
-  <!--Barra de navegación sin editar-->
-  <header>
-    <div class="container logo-nav-container">
-      <a id="equipo-h" class="nav-link" href="#presentacion">Equipo.h</a>
+<body style="background-color: #97CADB;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001B48;">
+    <a class="navbar-brand" href="#" style="color:#97CADB">Equipo .h</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" <span
+      class="navbar-toggler-icon"></span>
+    </button>
 
-      <input type="checkbox" id="btn-menu">
-      <label for="btn-menu"><img src="./img/menu_hamburguesa.png" alt=""></label>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="color:#97CADB">Introduccion<span
+              class="sr-only">(current)</span></a>
+        </li>
 
-      <!-- Sergio -->
-      <nav class="menu-nav">
-        <ul>
-          <li><a class="nav-link" href="#">Presentación</a></li>
-          <li><a class="nav-link" href="#">¿Que es?</a></li>
-          <li><a class="nav-link" href="#">Parámetros esenciales</a></li>
-          <li><a class="nav-link" href="#">Solución general</a></li>
-          <li><a class="nav-link" href="#top-down">Solución Top-Down</a></li> <!-- Sergio -->
-          <li><a class="nav-link" href="#botton-up">Solución Botton-Up</a></li>
-          <li><a class="nav-link" href="#hazlo-tu-mismo">Hazlo tu mismo</a></li> <!-- Sergio -->
-          <li><a class="nav-link" href="#contactos">Contactos</a></li> <!-- Sergio -->
-        </ul>
+        <li class="nav-item active">
+          <a class="nav-link" href="topDown.html" style="color:#97CADB">Top-down<span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="bottomUp.html" style="color:#97CADB">Bottom-up<span
+              class="sr-only">(current)</span></a>
+        </li>
 
-      </nav>
+        <li class="nav-item">
+          <a class="nav-link" style="color:#97CADB" href="aboutDotH.html">Sobre nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+        </li>
+      </ul>
     </div>
+  </nav>
 
-  </header>
+  <div class='container-fluid' style="background-color:#97CADB;">
+    <h2 style="color: #02457A; text-align: center; margin-top: 0.5cm;"><strong>Introduccion al problema de líneas de
+        producción</strong></h2>
 
-  <div class="container">
+    <div class="container" style="color: #02457A; justify-content: baseline; margin-top: 1cm;">
+      <p style="color: #02457A;">El problema en esencia dicta que:</p>
+      <ul style="text-align: justify;">
+        <li>Una fábrica de automóviles tiene dos líneas de montaje, cada una con n estaciones.</li>
+        <li>Una estacion se indica con S, i, j donde i es 1 o 2 e indica la línea de montaje en la que se encuentra cada
+          estacion, y j indica el número de cada estación. El tiempo empleado por estacion se indica mediante a i,j.
+        </li>
+        <li>Cada estacion está dedicada a algún tipo de trabajo como montaje de motores, montaje de carrocerías.
+          pintura, etc. Por lo tanto, el chasis de un automovil debe pasar por cada una de las n estaciones en orden
+          antes de salir de fábrica. Las estaciones paralelas de las dos líneas de montaje realizan la misma tarea.
+          Después de pasar por la estación S,i, j continuará hasta la estación S, i, j + 1 a menos que decida
+          transferirse a la otra línea.</li>
+        <li>Continuar en la misma línea no tiene ningún costo adicional, pero la transferencia de línea de montaje tiene
+          un tiempo de entrada e[i] y un tiempo de salida x[i] que pueden ser diferentes para las dos lineas.
+          Proporcione un algoritmo para calcular el tiempo mínimo que se necesitará para construir un chasis de
+          automóvil.</li>
+      </ul>
+      <p style="text-align:center"><img src="assets/lineasProduccionBase.png"></p>
+      <h2 style="color: #02457A; text-align: center; margin-top: 1cm;"><strong>Parametros esenciales</strong></h2>
+      <ul style="text-align: justify;">
+        <p style="color: #02457A;">Los parametros esenciales que contempla nuestro problema son:</p>
+        <li>Fabrica de <strong>n</strong> estaciones</li>
+        <li><strong>S[i,j]:</strong> i es la línea de montaje, j es la estación de trabajo.</li>
+        <li><strong>a[i,j]</strong>: tiempo requerido en la estacion</li>
+        <li><strong>e[i]</strong>: tiempo de entrada del producto, en este caso i solo puede ser 1 o 2</li>
+        <li><strong>x[i]</strong>: tiempo de salido de la línea, en este caso i sólo puede ser 1 o 2.</li>
+        <li><strong>t[i,j]</strong>: tiempo para pasar de la estación S[i,j] a la otra línea de montaje</li>
+      </ul>
 
-
+    </div>
 
     <div id="top-down" class="top-down">
       <h1>Solución Top-Down</h1>
       <p>En esta sección les hablaremos de la solución Top-Down la cual va de arriba hacia abajo.</p>
-      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas superpuestos)</p>
+      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas
+        superpuestos)</p>
 
       <h2>Casos Base</h2>
-      <p>En este caso como el chasis en la posición j puede provenir de la estación S[1,j-1] o de la estación S[2,j-1] podemos expresar nuestro primer caso.</p>
-      
+      <p>En este caso como el chasis en la posición j puede provenir de la estación S[1,j-1] o de la estación S[2,j-1]
+        podemos expresar nuestro primer caso.</p>
+
       <h3>Caso 1:</h3>
       <p>En este caso su estación anterior es S[1,j] por lo que podemos decir que </p>
-      
-      
+
+
     </div>
 
     <div id="botton-up" class="botton-up">
       <h1>Solución Botton-Up</h1>
       <p>En esta sección les hablaremos de la solución Botton-Up la cual va de abajo hacia arriba.</p>
-      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas mas pequeños)</p>
+      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas mas
+        pequeños)</p>
 
       <h2>Casos Base</h2>
-      <p>En este caso se definen los casos base como funciones, la primera función hace referencia a cuando el chasis o materia prima, entra en la linea de producción mientras que la siguiente condición nos indica cuando esta dentro de la linea de producción </p>
+      <p>En este caso se definen los casos base como funciones, la primera función hace referencia a cuando el chasis o
+        materia prima, entra en la linea de producción mientras que la siguiente condición nos indica cuando esta dentro
+        de la linea de producción </p>
       <img src="./img/Caso_base_botton_up.PNG" alt="" class="img-btn-up-cond">
-      
+
       <p>Código representativo de la condición 1</p>
       <img src="./img/Cod_cas_b1_btn.PNG" alt="" class="codigo">
-      
+
       <p>Código representativo de la condición 2</p>
       <img src="./img/Cod_cas_b2_btn.PNG" alt="" class="codigo">
 
@@ -83,38 +126,28 @@
       <h1>Puede ser otra pagina</h1>
     </div>
 
-  </div>
-  <!-- <div class='container - fluid'>
-    <h2>Bienvenido, usuario!!</h2>
+    <footer>
+      <div id="contactos" class="contactos">
+        <h1>Contactos de búsqueda</h1>
 
-    <div id="blender" class="blender">
-      <div id="blender-button" class="blender-button" onclick="controlarLicuadora()"></div>
-    </div>
-    <audio id="blender-button-sound" src="sounds/click.mp3" type="audio/mpeg"></audio>
-    <script src="js/lines.js"></script>
-  </div> -->
-  <footer>
-    <div id="contactos" class="contactos">
-      <h1>Contactos de búsqueda</h1>
-
-      <div class="cont-part">
-        Nombre: Roa Cruz Norman Ricardo <br>
-        Telegram: <br>
+        <div class="cont-part">
+          Nombre: Roa Cruz Norman Ricardo <br>
+          Telegram: <br>
+        </div>
+        <div class="cont-part">
+          Nombre: Rodríguez Alvarado Gustavo Adrián <br>
+          Telegram: <br>
+        </div>
+        <div class="cont-part">
+          Nombre: Rodríguez Gómez Andrés<br>
+          Telegram: <br>
+        </div>
+        <div class="cont-part">
+          Nombre: Rodríguez Ramírez Sergio<br>
+          Telegram: <br>
+        </div>
       </div>
-      <div class="cont-part">
-        Nombre: Rodríguez Alvarado Gustavo Adrián <br>
-        Telegram: <br>
-      </div>
-      <div class="cont-part">
-        Nombre: Rodríguez Gómez Andrés<br>
-        Telegram: <br>
-      </div>
-      <div class="cont-part">
-        Nombre: Rodríguez Ramírez Sergio<br>
-        Telegram: <br>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
