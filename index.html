@@ -16,7 +16,7 @@
   <title>Lineas de producción</title>
 </head>
 
-<body style="background-color: #97CADB;">
+<body style="background-color: #018ABE;">
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001B48;">
     <a class="navbar-brand" href="#" style="color:#97CADB">Equipo .h</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -46,15 +46,13 @@
         <li class="nav-item dropdown">
         </li>
       </ul>
-    </div>
-  </nav>
-
-  <div class='container-fluid' style="background-color:#97CADB;">
+    </nav>
+  <div class='container-fluid' style="background-color: #018ABE;">
     <h2 style="color: #02457A; text-align: center; margin-top: 0.5cm;"><strong>Introduccion al problema de líneas de
         producción</strong></h2>
 
     <div class="container" style="color: #02457A; justify-content: baseline; margin-top: 1cm;">
-      <p style="color: #02457A;">El problema en esencia dicta que:</p>
+      <p style="color: #97CADB;">El problema en esencia dicta que:</p>
       <ul style="text-align: justify;">
         <li>Una fábrica de automóviles tiene dos líneas de montaje, cada una con n estaciones.</li>
         <li>Una estacion se indica con S, i, j donde i es 1 o 2 e indica la línea de montaje en la que se encuentra cada
@@ -73,7 +71,7 @@
       <p style="text-align:center"><img src="assets/lineasProduccionBase.png"></p>
       <h2 style="color: #02457A; text-align: center; margin-top: 1cm;"><strong>Parametros esenciales</strong></h2>
       <ul style="text-align: justify;">
-        <p style="color: #02457A;">Los parametros esenciales que contempla nuestro problema son:</p>
+        <p style="color: #97CADB;">Los parametros esenciales que contempla nuestro problema son:</p>
         <li>Fabrica de <strong>n</strong> estaciones</li>
         <li><strong>S[i,j]:</strong> i es la línea de montaje, j es la estación de trabajo.</li>
         <li><strong>a[i,j]</strong>: tiempo requerido en la estacion</li>
@@ -83,71 +81,7 @@
       </ul>
 
     </div>
-
-    <div id="top-down" class="top-down">
-      <h1>Solución Top-Down</h1>
-      <p>En esta sección les hablaremos de la solución Top-Down la cual va de arriba hacia abajo.</p>
-      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas
-        superpuestos)</p>
-
-      <h2>Casos Base</h2>
-      <p>En este caso como el chasis en la posición j puede provenir de la estación S[1,j-1] o de la estación S[2,j-1]
-        podemos expresar nuestro primer caso.</p>
-
-      <h3>Caso 1:</h3>
-      <p>En este caso su estación anterior es S[1,j] por lo que podemos decir que </p>
-
-
-    </div>
-
-    <div id="botton-up" class="botton-up">
-      <h1>Solución Botton-Up</h1>
-      <p>En esta sección les hablaremos de la solución Botton-Up la cual va de abajo hacia arriba.</p>
-      <p>Para poder encontrar esta solución lo que primero haremos es definir nuestros casos base(Sub problemas mas
-        pequeños)</p>
-
-      <h2>Casos Base</h2>
-      <p>En este caso se definen los casos base como funciones, la primera función hace referencia a cuando el chasis o
-        materia prima, entra en la linea de producción mientras que la siguiente condición nos indica cuando esta dentro
-        de la linea de producción </p>
-      <img src="./img/Caso_base_botton_up.PNG" alt="" class="img-btn-up-cond">
-
-      <p>Código representativo de la condición 1</p>
-      <img src="./img/Cod_cas_b1_btn.PNG" alt="" class="codigo">
-
-      <p>Código representativo de la condición 2</p>
-      <img src="./img/Cod_cas_b2_btn.PNG" alt="" class="codigo">
-
-      <h2>Código de la implementación Botton-Up</h2>
-      <img src="./img/Cod_btn_up.PNG" alt="" class="codigo">
-    </div>
-
-    <div id="pruebalo-tu-mismo" class="pruebalo-tu-mismo">
-      <h1>Puede ser otra pagina</h1>
-    </div>
-
-    <footer>
-      <div id="contactos" class="contactos">
-        <h1>Contactos de búsqueda</h1>
-
-        <div class="cont-part">
-          Nombre: Roa Cruz Norman Ricardo <br>
-          Telegram: <br>
-        </div>
-        <div class="cont-part">
-          Nombre: Rodríguez Alvarado Gustavo Adrián <br>
-          Telegram: <br>
-        </div>
-        <div class="cont-part">
-          Nombre: Rodríguez Gómez Andrés<br>
-          Telegram: <br>
-        </div>
-        <div class="cont-part">
-          Nombre: Rodríguez Ramírez Sergio<br>
-          Telegram: <br>
-        </div>
-      </div>
-    </footer>
+      
 </body>
 
 </html>
