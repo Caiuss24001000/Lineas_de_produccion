@@ -1,38 +1,117 @@
+:root{
+    --color1: #001B48;
+    --color2: #02457A;
+    --color3: #018ABE;
+    --color4: #97CADB;
+    --color5: #D6E8EE;
+}
+
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
     font-family: 'Quicksand', sans-serif;
+    color: var(--color5);
 }
 
-div{
-    color: white;
+ body{
+    background-color: var(--color2);
+    margin: 0;
+}
+/*
+.container{
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.color1{
-    background-color: #001B48;
-    width: 140px;
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.color2{
-    background-color: #02457A;
-    width: 140px;
+header{
+    background-color: var(--color1);
+    padding: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
-.color3{
-    background-color: #018ABE;
-    width: 140px;
+header a{
+    text-decoration: none;
 }
 
-.color4{
-    background-color: #97CADB;
-    width: 140px;
+#btn-menu{
+    display:none;
 }
 
-.color5{
-    background-color: #D6E8EE;
-    width: 140px;
+header label{
+    display: none;
+    width:  30px;
+    height: 30px;
+    padding: 10px;
 }
+
+header label:hover{
+    cursor: pointer;
+    background: var(--color3);
+}
+
+.menu-nav ul{
+    margin: 0;
+    list-style: none;
+    padding: 0px;
+    display: flex;
+
+}
+
+.menu-nav li{
+    border-right: 1px;
+    display: inline-block;
+}
+
+.menu-nav li:hover{
+    background-color: var(--color3);
+}
+
+.menu-nav ul li a{
+    display: block;
+    padding: 15px 20px;
+    color: var(--color5);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media(max-width:780px){
+    header label{
+        display: block;
+    }
+
+    .menu-nav{
+        position: absolute;
+        background: var(--color3);
+        width: 30%;
+        min-width: 140px;
+        max-width: 200px;
+        margin-left: -80%;
+        transition: all 0.5s;
+    }
+
+    .menu-nav ul{
+        flex-direction: column;
+    }
+
+    .menu-nav li{
+        border-top: 1px solid var(--color5);
+        background: var(--color1);
+    }
+
+    #btn-menu:checked ~ .menu-nav{
+        margin: 0;
+    }
+} */
+
+
 
 .blender{
     position: fixed;
